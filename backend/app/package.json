@@ -1,0 +1,44 @@
+{
+  "name": "Backend-Task",
+  "version": "1.0.0",
+  "description": "Cognive Task ",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start":"node app.js",
+    "test": "./node_modules/.bin/mocha --timeout 100000  test/users.js"
+  },
+  "author": "Mahmoud Ahmed Mahmoud",
+  "license": "ISC",
+  "dependencies": {
+    "acl": "^0.4.11",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "chai": "^4.2.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-fileupload": "^1.0.0",
+    "express-sanitizer": "^1.0.4",
+    "express-validator": "^5.3.0",
+    "fs": "0.0.1-security",
+    "joi": "^14.0.4",
+    "jsonwebtoken": "^8.2.0",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.0.11",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.6.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.41.1",
+    "sequelize-cli": "^5.3.0",
+    "skipper": "^0.8.7",
+    "supertest": "^3.3.0"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1"
+  }
+}

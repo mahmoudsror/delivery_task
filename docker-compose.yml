@@ -1,0 +1,44 @@
+version: "3"
+services:
+
+  backend:
+    build:
+      context: ./backend/
+    volumes:
+      - ./backend:/server
+      - /server/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    command: >
+      /bin/sh -c "
+      sleep 30
+       echo database engine started ;
+       ./node_modules/.bin/sequelize db:migrate
+       ./node_modules/.bin/sequelize db:seed:all
+       nodemon
+      "
+  frontend:
+    build:
+      context: ./frontend/
+    command: ./node_modules/.bin/react-scripts start  
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - "3001:3000"
+    tty: true  
+
+  mysql:
+    build:
+      context: ./DB/
+    volumes:
+      - ./db-data:/var/lib/mysql/dat
+    restart: always  
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "delivery"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "xwwx1111"

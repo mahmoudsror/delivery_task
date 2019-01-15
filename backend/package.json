@@ -1,0 +1,37 @@
+{
+  "name": "Backend",
+  "version": "1.0.0",
+  "description": "Tasks API ",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha --timeout 100000  test/tasks.js"
+  },
+  "author": "Mahmoud Ahmed Mahmoud",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.2.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-fileupload": "^1.0.0",
+    "express-sanitizer": "^1.0.4",
+    "express-validator": "^5.3.0",
+    "fs": "0.0.1-security",
+    "joi": "^14.0.4",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.0.11",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.6.4",
+    "path": "^0.12.7",
+    "sequelize": "^4.41.1",
+    "sequelize-cli": "^5.3.0",
+    "supertest": "^3.3.0"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1"
+  }
+}

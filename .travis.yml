@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - ./backend/node_modules/.bin/mocha --timeout 1000 test/tasks.js
+  on:
+    branch: master
